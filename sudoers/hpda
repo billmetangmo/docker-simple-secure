@@ -1,0 +1,7 @@
+
+## Allow janus user to subsitute root user for docker
+Cmnd_Alias INIT_CMDS=/bin/bash /usr/bin/docker_bin/docker_install.sh,/bin/bash /usr/bin/docker_bin/docker_remove.sh,/bin/bash /usr/bin/docker_bin/docker_start.sh, /bin/bash /usr/bin/docker_bin/docker_stop.sh
+Cmnd_Alias DOCKER_CMDS=/bin/bash /usr/bin/docker_bin/docker_d.sh *
+
+cloud-user  ALL=(ALL)       NOPASSWD: INIT_CMDS,DOCKER_CMDS
+
